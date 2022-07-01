@@ -1,0 +1,28 @@
+
+//extends scss styles
+
+%equal-img {
+  background-position: center;
+  -moz-background-position: center;
+  -o-background-position: center;
+  -ms-background-position: center;
+  background-repeat: no-repeat;
+  -moz-background-repeat: no-repeat;
+  -o-background-repeat: no-repeat;
+  -ms-background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+
+// media queries
+
+$desktop: 1200px;
+$laptop: 960px;
+$tablet: 768px;
+$mobile: 480px;
+$mobile-landscape: 850px;
+$mobile-sm: 390px;
+$mobile-sm-landscape: 650px;

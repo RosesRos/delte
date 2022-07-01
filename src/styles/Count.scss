@@ -1,0 +1,35 @@
+@import './Variables';
+
+
+.count {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 3rem;
+    @media (max-width: $mobile-sm-landscape) {
+        flex-direction: row-reverse;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        padding-left: 0;
+    }
+    &_btn {
+        font-size: 2.5rem;
+        color: var(--mainColorBtn);
+        background-color: var(--mainBackgroundBtn);
+        border: none;
+        border-radius: 100%;
+        text-align: center;
+        margin: 0.5rem;
+        &:hover {
+            background-color: rgba(45, 185, 224, 0.5);
+            cursor: pointer;
+        }
+    }
+    &_res {
+        color: var(--mainColorText);
+        font-size: 2.5rem;
+        text-align: center;
+        @media (max-width: $mobile-sm-landscape) {
+            padding-top: 0.5rem;
+        }
+    }
+}
