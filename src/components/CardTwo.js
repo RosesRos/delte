@@ -21,6 +21,8 @@ const useStyles = createUseStyles({
 const variants = {
   visible: {
     maxWidth: '100%',
+    height: 0,
+    padding: 0,
   },
   hidden: {
     maxWidth: '25rem',
