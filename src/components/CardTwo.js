@@ -23,6 +23,7 @@ const variants = {
     maxWidth: '100%',
     height: 0,
     padding: 0,
+    opacity: 0,
   },
   hidden: {
     maxWidth: '25rem',
@@ -45,7 +46,7 @@ const CardTwo = () => {
     transition={{ duration: 2 }} variants={variants}>
       <div className='cardTwo_item' onClick={() => handleClick()}>
         <div className='cardTwo_delete'>
-          <h3 >hello card two</h3>
+          <h3>hello card two</h3>
         </div>
       </div>
     </motion.div> 
