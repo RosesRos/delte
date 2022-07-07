@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Shoe from '../assets/shoes.png';
+import { createUseStyles } from 'react-jss';
 
 // styles
 import '../styles/_Card.scss';
@@ -12,6 +13,25 @@ import CardTwo from './CardTwo';
 import ButtonOne from './subcomponents/ButtonOne';
 import ButtonTwo from './subcomponents/ButtonTwo';
 import TotalPaid from './subcomponents/TotalPaid';
+
+
+const useStyles = createUseStyles({
+  card: {
+    position: 'relative',
+    '&::before': {
+      display: 'block',
+      content: '',
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      zIndex: -1,
+      height: '100%',
+      width: ['0.8', 'rem'],
+      background: 'orange',
+      transition: ['width', '0.4s', 'ease-in-out']
+    }
+  }
+})
 
 const Card = () => {
 
