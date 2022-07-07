@@ -25,6 +25,9 @@
     //     transition: transform 3s;
     //     transform-style: preserve-3d;
     // }
+    @media (max-width: $mobile-landscape) and (orientation: landscape) {
+        max-width: 100%;
+    }
     @media (max-width: $tablet) {
         max-width: 100%;
     }
