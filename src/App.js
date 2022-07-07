@@ -1,5 +1,3 @@
-// import logo from './logo.svg';
-
 //components
 import Card from './components/Card';
 import { JssProvider } from 'react-jss';

@@ -8,7 +8,6 @@ import '../styles/Count.scss';
 //components
 
 import Title from './Title';
-// import Count from './Count';
 import CardTwo from './CardTwo';
 import ButtonOne from './subcomponents/ButtonOne';
 import ButtonTwo from './subcomponents/ButtonTwo';
