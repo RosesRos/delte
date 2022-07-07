@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Shoe from '../assets/shoes.png';
 
 // styles
-import '../styles/Card.scss';
+import '../styles/_Card.scss';
 import '../styles/Count.scss';
 
 //components

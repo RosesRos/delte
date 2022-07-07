@@ -1,50 +1,42 @@
 // styles 
-import '../styles/CardTwo.scss';
-import '../styles/Variables.scss';
+import '../styles/_CardTwo.scss';
+import '../styles/_Variables.scss';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { flipInY } from 'react-animations';
+import { flipInX } from 'react-animations';
 import { motion } from 'framer-motion';
 
-// const bounceAnimation = styled`${bounce}`;
+
+const mobilLandscape = 850; 
+
 
 const useStyles = createUseStyles({
   '@keyframes flipInY': flipInY,
   cardTwo: {
     animationName: `$flipInY`,
-    animationDuration: '5s',
-    // maxWidth: '25rem',
+    animationDuration: '2s',
+  },
+  [`@media (max-width: ${mobilLandscape}px)`] : {
+    '@keyframes flipInX': flipInX,
+    cardTwo: {
+      animationName: '$flipInX',
+      animationDuration: '2s',
+    }
   },
 })
 
-const variants = {
-  visible: {
-    maxWidth: '100%',
-    height: 0,
-    padding: 0,
-    opacity: 0,
-  },
-  hidden: {
-    maxWidth: '25rem',
-  },
-}
 
 
 
 const CardTwo = () => {
 
-  const [ click, setClick ] = useState(false);
   const classes = useStyles();
 
-  const handleClick = () => {
-    setClick((prev) => prev = !click)
-  }
-
   return (
-    <motion.div click={+click} className={classes.cardTwo} initial='hidden' animate={click ? 'visible' : 'hidden'}
-    transition={{ duration: 2 }} variants={variants}>
-      <div className='cardTwo_item' onClick={() => handleClick()}>
+    <motion.div className={classes.cardTwo}>
+      <div className='cardTwo_item'>
         <div className='cardTwo_delete'>
           <h3>hello card two</h3>
         </div>
