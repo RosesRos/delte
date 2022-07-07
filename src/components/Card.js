@@ -18,22 +18,13 @@ import TotalPaid from './subcomponents/TotalPaid';
 const useStyles = createUseStyles({
   card: {
     position: 'relative',
-    '&::before': {
-      display: 'block',
-      content: '',
-      position: 'absolute',
-      top: 0,
-      right: 0,
-      zIndex: -1,
-      height: '100%',
-      width: ['0.8', 'rem'],
-      background: 'orange',
-      transition: ['width', '0.4s', 'ease-in-out']
-    }
-  }
+  },
+  
 })
 
 const Card = () => {
+
+  const classes = useStyles();
 
   const [count, setCount] = useState(1);
   const [total] = useState(23);
@@ -66,7 +57,7 @@ const Card = () => {
 
 
   return (
-    <div className='card'>
+    <div className={classes.card}>
         <div className='card_content'>
           <div className='card_item'>
             <div className='card_item_img'>
