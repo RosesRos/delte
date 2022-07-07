@@ -29,6 +29,7 @@ const Card = () => {
   const [count, setCount] = useState(1);
   const [total] = useState(23);
 
+
   const resul = () => {
     if (count >= 10) {
       return count
@@ -54,7 +55,6 @@ const Card = () => {
       setCount((prev) => prev - 1);
     }
   }
-
 
   return (
     <div className={classes.card}>

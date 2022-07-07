@@ -8,9 +8,6 @@
     color: var(--mainWhite);
     text-align: center;
     padding: 2rem 1.5rem;
-    // &::before {
-    //     content: 'coco';
-    // }
     @media (max-width: $mobile-landscape) and (orientation: landscape) {
         max-width: 100%;
     }
