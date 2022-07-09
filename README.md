@@ -8,4 +8,10 @@ This is a small [card-project](https://github.com/facesar/prototype_crypto) in R
 - sass for global styles
 - react-jss for styles
 
-[![VERSION DEMO](./public/logo.jpg)](https://app.netlify.com/sites/facesar/deploys)
+<h3>
+    <a href="" styles="width:20%">
+        VERSION DEMO
+        <img styles="width:60%" src="./build/logo.jpg"></img>
+    </a>
+</h3>
+
