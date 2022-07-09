@@ -1,6 +1,6 @@
 # delte
 
-This is a small [card-project](https://github.com/facesar/prototype_crypto) in React-js
+This is a small [card-project](https://delte.surge.sh/) in React-js
 ## what pacckages was used: 
 
 - React
