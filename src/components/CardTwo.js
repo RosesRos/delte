@@ -23,7 +23,7 @@ const useStyles = createUseStyles({
     position: 'relative',
     '&::before': {
       display: 'block',
-      content: '""',
+      content: '"The Card Was Hide"',
       position: 'absolute',
       top: 0,
       right: 0,
@@ -31,12 +31,13 @@ const useStyles = createUseStyles({
       height: '100%',
       width: '100%',
       background: 'rgba(255, 0, 0, 1)',
+      paddingTop: '5rem',
       transition: ['width', '0.4s', 'ease-in-out']
     },
     '&:hover::before': {
       width: '360%',
       zIndex: 5,
-    }
+    },
   },
   [`@media (max-width: ${mobilLandscape}px)`] : {
     '@keyframes flipInX': flipInX,
@@ -50,16 +51,17 @@ const useStyles = createUseStyles({
         bottom: 0,
         transition: ['height', '0.4s', 'ease-in-out'],
         display: 'block',
-        content: "''",
+        content: "'The Card Was Hide'",
         position: 'absolute',
         right: 0,
         zIndex: -1,
         height: '100%',
         width: '100%',
         background: 'rgba(255, 0, 0, 1)',
+        paddingTop: '5rem',
       },
       '&:hover::after': {
-        height: '230%',
+        height: '320%',
         zIndex: 5,
       }
     }
@@ -67,7 +69,7 @@ const useStyles = createUseStyles({
   [`@media (max-width:${mobilSmLandscape}px)`]: {
     cardTwo: {
       '&:hover::after': {
-        height: '430%',
+        height: '660%',
         zIndex: 5,
       }
     }
@@ -75,7 +77,7 @@ const useStyles = createUseStyles({
   [`@media (max-width:${mobil}px)`]: {
     cardTwo: {
       '&:hover::after': {
-        height: '400%',
+        height: '600%',
         zIndex: 5,
       }
     }
@@ -83,13 +85,23 @@ const useStyles = createUseStyles({
   [`@media (max-width:${mobilSm}px)`]: {
     cardTwo: {
       '&:hover::after': {
-        height: '370%',
+        height: '560%',
         zIndex: 5,
       }
     }
   },
-})
+});
 
+function ToggleContent({ header}) {
+
+  const classes = useStyles();
+
+  return (
+    <React.Fragment>
+      <motion.h2 className={classes.delete}>{header}</motion.h2>
+    </React.Fragment>
+  )
+}
 
 
 const CardTwo = () => {
@@ -97,15 +109,12 @@ const CardTwo = () => {
   const classes = useStyles();
 
   return (
-    <motion.div className={classes.cardTwo}>
+    <motion.div layout className={classes.cardTwo}>
       <div className='cardTwo_item'>
-        <div className='cardTwo_delete'>
-          <h3>hello card two</h3>
-        </div>
+        <ToggleContent header='Hide the Card'/>
       </div>
     </motion.div> 
   )
 }
-
 
 export default CardTwo
