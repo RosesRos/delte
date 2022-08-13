@@ -1,6 +1,6 @@
 // styles 
-import '../styles/_CardTwo.scss';
-import '../styles/_Variables.scss';
+// import '../styles/_CardTwo.scss';
+// import '../styles/_Variables.scss';
 
 import React from 'react';
 import { createUseStyles } from 'react-jss';

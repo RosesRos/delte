@@ -4,7 +4,7 @@ import { JssProvider } from 'react-jss';
 import { AnimatePresence } from 'framer-motion';
 
 //styles
-import './App.scss';
+// import './App.scss';
 
 const generateId = (rule) => `${rule.key}`;
 

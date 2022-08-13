@@ -3,8 +3,8 @@ import Shoe from '../assets/shoes.png';
 import { createUseStyles } from 'react-jss';
 
 // styles
-import '../styles/_Card.scss';
-import '../styles/Count.scss';
+// import '../styles/_Card.scss';
+// import '../styles/W.scss';
 
 //components
 
