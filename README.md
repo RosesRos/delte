@@ -7,6 +7,7 @@ This is a small [card-project](https://delte.surge.sh/) in React-js
 - react-animations 
 - sass for global styles
 - react-jss for styles
+- redux for store
 
 <h3>
     <a href="https://delte.surge.sh/" styles="width:20%">
