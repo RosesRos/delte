@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import Shoe from '../assets/shoes.png';
 import { createUseStyles } from 'react-jss';
 
-// styles
-// import '../styles/_Card.scss';
-// import '../styles/W.scss';
+
+// Store-Count
+
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement, selectCount } from '../store/features/counter/CounterSlice'; 
 
 //components
 
@@ -26,7 +28,9 @@ const Card = () => {
 
   const classes = useStyles();
 
-  const [count, setCount] = useState(1);
+  const count = useSelector(selectCount);
+  const dispatch = useDispatch();
+
   const [total] = useState(23);
 
 
@@ -44,15 +48,15 @@ const Card = () => {
     return total * count;
   }
 
-  const increment = () => {
-    setCount((prev) => prev + 1);
+  const Increment = () => {
+    dispatch(increment())
   }
 
-  const decrement = () => {
+  const Decrement = () => {
     if (count <= 0) {
-      setCount((prev) => prev = 0);
+      return count;
     } else {
-      setCount((prev) => prev - 1);
+      dispatch(decrement())
     }
   }
 
@@ -75,9 +79,9 @@ const Card = () => {
           </div>
           <div className='card_item'>
             <div className='count'>
-              <ButtonOne val='+' increHandler={() => increment()}/>
+              <ButtonOne val='+' increHandler={() => Increment()}/>
               <span className='count_res'>{ resul() }</span>
-              <ButtonTwo val='-' decreHandler={() => decrement()}/>
+              <ButtonTwo val='-' decreHandler={() => Decrement()}/>
             </div>
           </div>
         </div>
